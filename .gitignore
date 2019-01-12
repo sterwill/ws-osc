@@ -1,6 +1,5 @@
-.idea/
-*.iml
 target/
+.idea/libraries/
 out/
 package/
 deploy/

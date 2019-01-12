@@ -1,0 +1,44 @@
+<component name="ArtifactManager">
+  <artifact name="ws-osc:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ws_osc_jar</output-path>
+    <root id="root">
+      <element id="archive" name="ws-osc.jar">
+        <element id="module-output" name="ws-osc" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+      <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.2.1" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-model:2.0.1" />
+      <element id="library" level="project" name="Maven: asm:asm:3.0" />
+      <element id="library" level="project" name="Maven: com.illposed.osc:javaosc-core:0.4" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-profile:2.0.1" />
+      <element id="library" level="project" name="Maven: asm:asm-tree:3.0" />
+      <element id="library" level="project" name="Maven: junit:junit:3.8.1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:2.0" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact-manager:2.0.1" />
+      <element id="library" level="project" name="Maven: org.apache.ant:ant:1.7.0" />
+      <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:1.0.5" />
+      <element id="library" level="project" name="Maven: com.jgoodies:forms:1.1-preview" />
+      <element id="library" level="project" name="Maven: classworlds:classworlds:1.1-alpha-2" />
+      <element id="library" level="project" name="Maven: com.intellij:javac2:7.0.3" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.21" />
+      <element id="library" level="project" name="Maven: org.apache.ant:ant-launcher:1.7.0" />
+      <element id="library" level="project" name="Maven: com.intellij:forms_rt:7.0.3" />
+      <element id="library" level="project" name="Maven: io.netty:netty:4.0.0.Alpha8" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-artifact:2.0.1" />
+      <element id="library" level="project" name="Maven: asm:asm-commons:3.0" />
+      <element id="library" level="project" name="Maven: ch.qos.logback:logback-access:1.2.1" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.0.1" />
+      <element id="library" level="project" name="Maven: org.apache.maven.wagon:wagon-provider-api:1.0-alpha-5" />
+      <element id="library" level="project" name="Maven: org.apache.maven:maven-repository-metadata:2.0.1" />
+      <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-container-default:1.0-alpha-9" />
+      <element id="library" level="project" name="Maven: org.codehaus.mojo:ideauidesigner-maven-plugin:1.0-beta-1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.8" />
+      <element id="library" level="project" name="Maven: jdom:jdom:1.0" />
+      <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.2.1" />
+    </root>
+  </artifact>
+</component>
