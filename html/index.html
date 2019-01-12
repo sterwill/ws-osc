@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ws-osc Test Page</title>
+    <script src="https://code.jquery.com/jquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            var reconnectDelay = 500;
+            var socket = null;
+
+            var connect = function () {
+                // Endpoint that handles Affectiva face detection messages
+                socket = new WebSocket("ws://localhost:5000/faces");
+
+                socket.addEventListener("open", function (event) {
+                    console.log("websocket open");
+
+                    /* Send one test message (remove this if you hook up other event sources) */
+                    var timestamp = Date.now();
+                    var e = {
+                        "type": "faceEvent",
+                        "data": {
+                            "timestamp": timestamp,
+                            "faces": [
+                                {
+                                    'emotions': {'sad': 1.0},
+                                    'expressions': {'grin': 1.5},
+                                    'appearance': {'height': 1.7},
+                                    'measurements': {'interocularDistance': 2.0, 'orientation': {'top': 3.0}},
+                                    'featurePoints': {
+                                        '0': {'x': 123, 'y': 456},
+                                        '1': {'x': 1123, 'y': 1456}
+                                    }
+                                }
+                            ]
+                        }
+                    };
+                    console.log("sending face event: " + timestamp);
+                    socket.send(JSON.stringify(e));
+                });
+
+                socket.addEventListener("close", function (event) {
+                    console.log("websocket closed: " + JSON.stringify(event));
+                    console.log("reconnecting in " + reconnectDelay + " ms");
+                    setTimeout(function () {
+                        console.log("reconnecting");
+                        connect();
+                    }, reconnectDelay);
+                });
+            };
+
+            connect();
+
+
+            /* If you have the Affectiva SDK loaded in the page, you can hook it up like: */
+            /*
+            var defaultOnImageResultsSuccessFunc = detector.callbacks['onImageResultsSuccess'];
+            console.log("original onImageResultsSuccess callback captured: " + defaultOnImageResultsSuccessFunc);
+
+            detector.addEventListener("onImageResultsSuccess", function (faces, image, timestamp) {
+                if (socket != null && socket.readyState === WebSocket.OPEN) {
+                    var e = {
+                        "type": "faceEvent",
+                        "data": {
+                            "timestamp": timestamp,
+                            "faces": faces,
+                        }
+                    };
+                    console.log("sending face event: " + timestamp);
+                    socket.send(JSON.stringify(e));
+                }
+                if (defaultOnImageResultsSuccessFunc !== undefined) {
+                    defaultOnImageResultsSuccessFunc(faces, image, timestamp);
+                }
+            });
+            */
+        });
+    </script>
+
+</head>
+<body>
+<h1>ws-osc Test Page</h1>
+<p>
+    This web page contains Javascript that connects to the ws-osc server running at
+    localhost:5000 and sends a test message.
+</p>
+<ol>
+    <li>Start the ws-osc server</li>
+    <li>Configure at least one OSC endpoint</li>
+    <li>Open this web page in your browser</li>
+    <li>Hit F12 and have a look at your browser's console log to see if it connected</li>
+    <li>Check ws-osc's stdout for log messages about parsing websocket mesages and sending OSC</li>
+</ol>
+</body>
+</html>

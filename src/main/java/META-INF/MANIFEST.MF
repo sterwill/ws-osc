@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Class-Path: logback-core-1.2.1.jar maven-model-2.0.1.jar asm-3.0.jar j
+ avaosc-core-0.4.jar maven-profile-2.0.1.jar asm-tree-3.0.jar junit-3.
+ 8.1.jar jackson-databind-2.8.8.jar jackson-annotations-2.8.0.jar mave
+ n-plugin-api-2.0.jar maven-artifact-manager-2.0.1.jar ant-1.7.0.jar p
+ lexus-utils-1.0.5.jar forms-1.1-preview.jar classworlds-1.1-alpha-2.j
+ ar javac2-7.0.3.jar slf4j-api-1.7.21.jar ant-launcher-1.7.0.jar forms
+ _rt-7.0.3.jar netty-4.0.0.Alpha8.jar maven-artifact-2.0.1.jar asm-com
+ mons-3.0.jar logback-access-1.2.1.jar maven-project-2.0.1.jar wagon-p
+ rovider-api-1.0-alpha-5.jar maven-repository-metadata-2.0.1.jar plexu
+ s-container-default-1.0-alpha-9.jar ideauidesigner-maven-plugin-1.0-b
+ eta-1.jar jackson-core-2.8.8.jar jdom-1.0.jar logback-classic-1.2.1.j
+ ar
+Main-Class: com.tinfig.wsosc.Main
+
